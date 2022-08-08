@@ -7,4 +7,5 @@ Other technologies used:
 - Sass 
 - Semantic HTML
 
-Repository:
+Repository: https://github.com/JairOrozco/interactive-rating-card
+Page: https://jairorozco.github.io/interactive-rating-card/
