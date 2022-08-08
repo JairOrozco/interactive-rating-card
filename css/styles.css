@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  font-size: 62.5%; }
+
+body {
+  background: #a8a8a8; }
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+.backgroundgray {
+  background: #959eac; }
+  .backgroundgray p {
+    color: white; }
+
+.backgrounddarkblue {
+  background: #262e36; }
+  .backgrounddarkblue p {
+    color: #959eac; }
+
+.frontCard {
+  border: 1px solid #262e36;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 20px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  user-select: none;
+  border-radius: 20px;
+  background: #2e3742; }
+  .frontCard__containerImg {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #262e36; }
+    .frontCard__containerImg img {
+      width: 13px;
+      height: 13px; }
+  .frontCard h1 {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: white; }
+  .frontCard__containerRatingMessage {
+    width: 100%; }
+    .frontCard__containerRatingMessage .ratingMessage {
+      font-size: 1.5rem;
+      color: #959eac; }
+  .frontCard__containerNumberRating {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100%;
+    place-items: center;
+    margin: 25px 0; }
+    .frontCard__containerNumberRating .numberRating {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%; }
+      .frontCard__containerNumberRating .numberRating p {
+        width: auto;
+        height: auto;
+        font-size: 1.5rem; }
+    .frontCard__containerNumberRating .numberRating:active {
+      background: #959eac;
+      cursor: pointer; }
+      .frontCard__containerNumberRating .numberRating:active p {
+        color: white; }
+  .frontCard__buttonSubmit {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .3rem;
+    color: white;
+    background: #fb7413; }
+  .frontCard__buttonSubmit:active {
+    color: #fb7413;
+    background: white;
+    cursor: pointer; }
+
+.reverseCard {
+  border: 1px solid #262e36;
+  width: 340px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  user-select: none;
+  border-radius: 20px;
+  background: #2e3742; }
+  .reverseCard__containerImg {
+    width: 140px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #2e3742; }
+    .reverseCard__containerImg img {
+      width: 100%; }
+  .reverseCard__rating {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background: #262e36; }
+  .reverseCard .ratingText {
+    font-size: 1.4rem;
+    color: #fb7413; }
+  .reverseCard h2 {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: white; }
+  .reverseCard__containerThanksMessage {
+    width: 100%;
+    padding: 0 10px; }
+    .reverseCard__containerThanksMessage .thanksMessage {
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 2.4rem;
+      color: #959eac; }
+
+@media (min-width: 600px) {
+  .numberRating {
+    transition: 400ms ease-in-out; }
+  .numberRating:hover {
+    transform: scale(1.1);
+    transition: 300ms ease-in-out;
+    background: #fb7413;
+    cursor: pointer; }
+    .numberRating:hover p {
+      color: white;
+      font-size: 1.6rem; }
+  .numberRating:active {
+    transform: scale(1); }
+  .frontCard__buttonSubmit {
+    transition: 300ms ease-in-out; }
+  .frontCard__buttonSubmit:hover {
+    transform: scale(1.05);
+    transition: 300ms ease-in-out;
+    font-size: 1.4rem;
+    color: #fb7413;
+    background: white;
+    cursor: pointer; }
+  .frontCard__buttonSubmit:active {
+    transform: scale(1); } }
+
+.inactive {
+  display: none; }

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+
+// Variables
+
+// Colors
+
+$orange: hsl(25, 97%, 53%);
+
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 18%, 22%);
+$veryDarkBlue: hsl(210, 17%, 18%);
+
+// Font
+$overpass: 'Overpass', sans-serif;
+
+body {
+    background: rgb(168, 168, 168);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.backgroundgray {
+    background: $lightGrey;
+    p {
+        color: $white;
+    }
+}
+
+.backgrounddarkblue {
+    background: $veryDarkBlue;
+    p {
+        color: $lightGrey;
+    }
+}
+
+.frontCard {
+    border: 1px solid $veryDarkBlue;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+    font-family: $overpass;
+    font-weight: 400;
+    user-select: none;
+    border-radius: 20px;
+    background: $darkBlue;
+    
+
+    &__containerImg {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: $veryDarkBlue;
+        img {
+            width: 13px;
+            height: 13px;
+        }
+    }
+
+    h1 {
+        width: 100%;
+        margin: 15px 0;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: white;
+    }
+
+    &__containerRatingMessage {
+        width: 100%;
+        .ratingMessage {
+            font-size: 1.5rem;
+            color: $lightGrey;
+        }
+    }
+
+    &__containerNumberRating {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 100%;
+        place-items: center;
+        margin: 25px 0;
+        .numberRating {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            p {
+                width: auto;
+                height: auto;
+                font-size: 1.5rem;
+            }
+        }
+        .numberRating:active {
+            background: $lightGrey;
+            cursor: pointer;
+            p {
+                color: $white;
+            }
+        }
+    }
+
+    &__buttonSubmit {
+        width: 90%;
+        height: 40px;
+        margin: 0 auto;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .3rem;
+        color: white;
+        background: $orange;
+    }
+    &__buttonSubmit:active {
+        color: $orange;
+        background: $white;
+        cursor: pointer;
+    }
+
+}
+
+.reverseCard {
+    border: 1px solid $veryDarkBlue;
+    width: 340px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    font-family: $overpass;
+    font-weight: 400;
+    user-select: none;
+    border-radius: 20px;
+    background: $darkBlue;
+    &__containerImg {
+        width: 140px;
+        height: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        background: $darkBlue;
+
+        img {
+            width: 100%;
+        }
+    }
+    &__rating {
+        width: 170px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        background: $veryDarkBlue;
+    }
+
+    .ratingText {
+        font-size: 1.4rem;
+        color: $orange;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 15px 0;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+        color: $white;
+    }
+    &__containerThanksMessage {
+        width: 100%;
+        padding: 0 10px;
+        .thanksMessage {
+            font-size: 1.4rem;
+            text-align: center;
+            line-height: 2.4rem;
+            color: $lightGrey;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    
+    .numberRating{
+        transition: 400ms ease-in-out;
+    }
+
+    .numberRating:hover {
+        transform: scale(1.1);
+        transition: 300ms ease-in-out;
+        background: $orange;
+        cursor: pointer;
+        p {
+            color: $white;
+            font-size: 1.6rem;
+        }
+    }
+
+    .numberRating:active {
+        transform: scale(1);
+    }
+
+    .frontCard__buttonSubmit {
+        transition: 300ms ease-in-out;
+    }
+
+    .frontCard__buttonSubmit:hover {
+        transform: scale(1.05);
+        transition: 300ms ease-in-out;
+        font-size: 1.4rem;
+        color: $orange;
+        background: $white;
+        cursor: pointer;
+    }
+    .frontCard__buttonSubmit:active {
+        transform: scale(1);
+    }
+
+
+}
+
+
+// Estilos de estado
+.inactive {
+    display: none;
+}
+
